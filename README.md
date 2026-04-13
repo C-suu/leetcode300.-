@@ -39,9 +39,6 @@
 ```python
 class Solution:
     def lengthOfLIS(self, nums: list[int]) -> int:
-        # 防御性编程：如果数组为空，直接返回长度 0
-        if not nums:
-            return 0
         # tails 数组记录各长度上升子序列的最小结尾数，初始全为 0
         # res 记录当前已经探索到的最长递增子序列的有效长度
         tails, res = [0] * len(nums), 0
